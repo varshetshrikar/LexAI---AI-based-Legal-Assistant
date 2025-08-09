@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LexAI Design System - Professional Legal Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Deep Blues & Golds for Legal Authority */
+    --background: 0 0% 100%;
+    --foreground: 218 84% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 84% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 84% 6%;
+
+    /* Legal Brand Primary - Deep Navy Blue */
+    --primary: 218 100% 12%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 218 100% 16%;
+
+    /* Professional Gold Accent */
+    --accent-gold: 45 100% 51%;
+    --accent-gold-dark: 38 92% 50%;
+    --accent-gold-light: 45 100% 95%;
+
+    /* Secondary - Sophisticated Gray */
+    --secondary: 218 20% 95%;
+    --secondary-foreground: 218 84% 6%;
+
+    --muted: 218 20% 96%;
+    --muted-foreground: 218 16% 46%;
+
+    --accent: 218 20% 96%;
+    --accent-foreground: 218 84% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 218 20% 90%;
+    --input: 218 20% 95%;
+    --ring: 218 100% 12%;
+
+    /* Success for approvals */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning for pending states */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+
+    /* Legal-specific gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--accent-gold)), hsl(var(--accent-gold-dark)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Professional shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.1);
+    --shadow-gold: 0 5px 20px -5px hsl(var(--accent-gold) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(var(--foreground) / 0.08);
+
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Professional Legal Theme */
+    --background: 218 84% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 218 50% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 218 50% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 100% 51%;
+    --primary-foreground: 218 84% 6%;
+    --primary-hover: 38 92% 50%;
+
+    --accent-gold: 45 100% 51%;
+    --accent-gold-dark: 38 92% 50%;
+    --accent-gold-light: 45 100% 15%;
+
+    --secondary: 218 30% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 218 30% 12%;
+    --muted-foreground: 218 15% 65%;
+
+    --accent: 218 30% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 218 30% 18%;
+    --input: 218 30% 12%;
+    --ring: 45 100% 51%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv05", "cv06", "cv07", "cv08", "cv09", "cv10", "cv11";
+  }
+
+  /* Typography Classes */
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Professional shadows */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Glass effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
